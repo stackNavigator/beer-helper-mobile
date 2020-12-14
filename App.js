@@ -6,7 +6,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 
 import Home from './src/Screens/Home';
 import AdditionalWater from './src/Screens/AdditionalWater';
@@ -21,15 +21,17 @@ const App = () => {
       <StatusBar barStyle="light-content" />
       <NavigationContainer>
         <Navigator screenOptions={{
+          headerBackTitleVisible: false,
           headerTitleAlign: 'center',
           headerTintColor: Colors.mainColor,
           headerStyle: styles.header,
           headerTitleStyle: styles.headerTitle,
           headerBackTitleStyle: styles.headerBack,
+          ...TransitionPresets.SlideFromRightIOS,
         }}>
           <Screen name="Home" component={Home} />
-        <Screen name="Additional Water" component={AdditionalWater} />
-        <Screen name="Beer Bitterness" component={BeerBitterness} />
+          <Screen name="Additional Water" component={AdditionalWater} />
+          <Screen name="Beer Bitterness" component={BeerBitterness} />
         </Navigator>
       </NavigationContainer>
     </SafeAreaView >

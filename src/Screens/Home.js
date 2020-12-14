@@ -1,11 +1,11 @@
-import React, {useCallback} from 'react';
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import React, { useCallback } from 'react';
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-import {Colors, getSize} from '../Constants'
+import { Colors, getSize } from '../Constants'
 
 const Home = () => {
-  const {navigate} = useNavigation();
+  const { navigate } = useNavigation();
   const handleWaterClick = useCallback(() => navigate('Additional Water'));
   const handleBitternessClick = useCallback(() => navigate('Beer Bitterness'));
 
