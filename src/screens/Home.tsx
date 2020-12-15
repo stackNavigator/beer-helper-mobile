@@ -2,12 +2,12 @@ import React, { useCallback } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import { Colors, getSize } from '../Constants'
+import { Colors, getSize } from '../constants'
 
-const Home = () => {
+export const Home = () => {
   const { navigate } = useNavigation();
-  const handleWaterClick = useCallback(() => navigate('Additional Water'));
-  const handleBitternessClick = useCallback(() => navigate('Beer Bitterness'));
+  const handleWaterClick = useCallback(() => navigate('AdditionalWater'));
+  const handleBitternessClick = useCallback(() => navigate('BeerBitterness'));
 
   return (
     <View style={styles.container}>
@@ -40,6 +40,4 @@ const styles = StyleSheet.create({
     color: Colors.mainColor,
     fontSize: getSize(24),
   }
-})
-
-export default Home;
+});

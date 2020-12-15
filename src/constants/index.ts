@@ -8,4 +8,5 @@ export const Colors = {
   mainColor: 'yellow',
 };
 
-export const getSize = size => size / DEFAULT_WIDTH * width;
+export const getSize = (size: number) => size / DEFAULT_WIDTH * width;
+export const windowWidth = width;
